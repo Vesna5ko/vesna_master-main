@@ -149,19 +149,19 @@ it.skip("Update book1 full", (done) => {
             done();
         });
 });
-it("Update book1 img", (done) => {
+it("Update book1 authors", (done) => {
     server
-        .put("/api/books/" + book1._id)
-        .send({ "img": book1.img })
+        .put("/api/books/author/" + book1._id)
+        .send({ "authors": book1.authors })
         .expect("Content-type", /json/)
         .expect(200) // THis is HTTP response
         .end((err, res) => {
             should(res.status).equal(200);
-            should(res.body.img).equal(book1.img);
+            should(res.body.img).equal(book1Update.img);
             should(res.body.title).equal(book1Update.title);
             should(res.body.series).equal(book1Update.series);
             should(res.body.bookInSeries).equal(book1Update.bookInSeries);
-            should(res.body.authors).equal(book1Update.authors);
+            should(res.body.authors).equal(book1.authors);
          
             should(res.body.description).equal(book1Update.description);
             should(res.body.read).equal(book1Update.read);
