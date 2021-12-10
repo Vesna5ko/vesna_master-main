@@ -1,0 +1,24 @@
+{
+  "name": "masterbibliotekarestapi",
+  "version": "0.0.1",
+  "description": "This is ReastAPI for my master ",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon app.js"
+  },
+  "author": "Vesna Petkovic",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26",
+    "requests": "^0.3.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "should": "^13.2.3",
+    "supertest": "^6.1.6"
+  }
+}
